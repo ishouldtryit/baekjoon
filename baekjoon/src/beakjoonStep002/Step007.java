@@ -18,18 +18,33 @@ public class Step007 {
 		
 		boolean role1 = oneTwo && oneThree;
 		boolean role2 = oneTwo || oneThree || twoThree;
-		boolean role3 = !role2;
 		
-		int money1 = 10000+(one*1000);
-//		int money2 = 1000+()
+		
 		
 		if(role1) {
-			
+			System.out.println(10000+(one*1000));
+		}else if(role2) {
+			if(oneTwo||oneThree) {
+				System.out.println(1000+(one*100));
+			}else {
+				System.out.println(1000+(two*100));
+			}
+		}else {
+			if(one>two) {
+				if(one>three) {
+					System.out.println(one*100);
+				}else {
+					System.out.println(three*100);
+				}
+			}else {
+				if(two>three) {
+					System.out.println(two*100);
+				}else {
+					System.out.println(three*100);
+				}
+			}
 			
 		}
-				
-		
-		
 		sc.close();
 	}
 }
