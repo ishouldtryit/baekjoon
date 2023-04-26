@@ -1,16 +1,13 @@
-package beakjoon;
+package beakjoonStep001;
 
 import java.util.Scanner;
 
-public class Step_004 {
+public class Step007 {
 	public static void main(String[] args) {
 		
 		 Scanner sc = new Scanner(System.in);
-		 int a = sc.nextInt();
-		 int b= sc.nextInt();
-		 System.out.println(a*b);
-		 
+		 String a = sc.next();
+			 System.out.println(a+"??!");
 		 sc.close();
-		 
 	}
 }

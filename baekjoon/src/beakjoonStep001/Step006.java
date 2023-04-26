@@ -1,8 +1,8 @@
-package beakjoon;
+package beakjoonStep001;
 
 import java.util.Scanner;
 
-public class Step_006 {
+public class Step006 {
 	public static void main(String[] args) {
 		
 		 Scanner sc = new Scanner(System.in);

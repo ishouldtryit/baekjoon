@@ -1,7 +1,7 @@
-package beakjoon;
+package beakjoonStep001;
 
 
-public class Step_011 {
+public class Step011 {
 	public static void main(String[] args) {
 		
 		System.out.println("|\\_/|");
