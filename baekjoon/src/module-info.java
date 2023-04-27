@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author kiki
- *
- */
-module baekjoon {
-}
