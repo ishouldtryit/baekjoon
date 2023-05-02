@@ -18,16 +18,21 @@ import java.io.OutputStreamWriter;
 			int num = 2*input-1;
 			int space = 0;
 			int star = 0;
+			int x = input;
+			int y = 0;
 			for(int a=0; a<num; a++) {
-				space = input-a-1;
-				star = a*2+1;
-
-				for(int b=0; b<space; b++) {
+				x--;
+				y=0;
+				space = Math.abs(x);
+				star = input-space-1;
+				y += 2*star+1;
+				for(int c=0; c<space; c++) {
 					bw.write(" ");
 				}
-				for(int c=0; c<star; c++) {
+				for(int d=0; d<y; d++) {
 					bw.write("*");
 				}
+				
 				bw.newLine();
 			}
 		
