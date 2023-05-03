@@ -20,33 +20,42 @@ import java.util.List;
 			String input2 = null;
 			String [] inputs = input.split(" ");
 			String [] inputs2=null;
+			
 			int n = Integer.parseInt(inputs[0]);
 			int m = Integer.parseInt(inputs[1]);
 			int i =0;
 			int j =0;
 			int k =0;
+			
 			List<Integer> list = new ArrayList<>();
-			int temp=0;
+			int beginTemp=0;
+			
 			for(int a=1; a<=n; a++) {
 				list.add(a);
 			}
+			
 			for(int b=0; b<m; b++) {
+				
 				inputs2 = null;
 				input2=br.readLine();
 				inputs2=input2.split(" ");
 				i = Integer.parseInt(inputs2[0]);
 				j = Integer.parseInt(inputs2[1]);
 				k = Integer.parseInt(inputs2[2]);
-
-				temp = list.get(k-1);
-				for(int c=0; c<j-k; c++) {
-					list.set(k-1+c, list.get(k+c));
+				
+				
+				for(int d=0; d<k-i; d++) {
+					beginTemp = list.get(i-1);
+					for(int c=0; c<j-i; c++) {
+						list.set(i-1+c, list.get(i+c));
+					}
+					list.set(j-1, beginTemp);
 				}
-				list.set(j-1, temp);
+				
 			}
 			
 			for(int x=0; x<list.size(); x++) {
-				bw.write(String.valueOf(list.get(x)));
+				bw.write(String.valueOf(list.get(x))+" ");
 			}
 			
 			
