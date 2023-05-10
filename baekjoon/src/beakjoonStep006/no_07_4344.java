@@ -20,9 +20,13 @@ import java.io.OutputStreamWriter;
 			
 			System.out.println(check[0]);
 			
-			int find = input2.indexOf("as");
+			int start = input2.indexOf("as");
+			int end = start+ check[0].length();
 			
-			System.out.println(find);
+			
+			String sub = input2.substring(start, end);
+			
+//			System.out.println(find);
 			
 			bw.close();
 			br.close();
