@@ -14,19 +14,29 @@ import java.io.OutputStreamWriter;
 			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 			BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
+			int input = Integer.parseInt(br.readLine());
+			for(int c=0; c<input; c++) {
+				
 			String input2 = br.readLine();
-
-			String [] check = {"c=","c-","dz=","d-","lj","nj","s=","z="};
+			String[] inputs2 = input2.split(" ");
+			int student = Integer.parseInt(inputs2[0]);
+			int[] inputs3 = new int[inputs2.length-1];
+			int total = 0;
+			for(int a=1; a<inputs2.length; a++) {
+				inputs3[a-1] = Integer.parseInt(inputs2[a]);
+				total += Integer.parseInt(inputs2[a]);
+			}
+			double average = (double)total/student;
+			int count=0;
+			for(int b=0; b<inputs3.length; b++) {
+				if((double)inputs3[b]>average) {
+					count++;
+				}
+			}
+			double result = (double)count/student*100.0;
 			
-			System.out.println(check[0]);
-			
-			int start = input2.indexOf("as");
-			int end = start+ check[0].length();
-			
-			
-			String sub = input2.substring(start, end);
-			
-//			System.out.println(find);
+			System.out.println(String.format("%.3f", result)+"%");
+			}
 			
 			bw.close();
 			br.close();
